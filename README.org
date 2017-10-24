@@ -12,10 +12,10 @@ where the filter coefficients ܾ b_{0}, b_{1}, ... , b_{5} and a_{1}, a_{2}, ...
 2. The program can display the usage of the program and exists when it is invoked as follows $ lpplay –help
 
 3. The program can support 16 bit mono WAV files whose sampling frequencies are either 22050Hz or 44100Hz. For unsupported WAV files, the program will display a message saying that the WAV format is not supported and display the following information on the file.wav and then exist.
-+ Number of channels
-+ Number of bits per sampl
-+ Sampling frequency
-+ Duration in seconds
+   + Number of channels
+   + Number of bits per sampl
+   + Sampling frequency
+   + Duration in seconds
 
 4. Users can able to switch the audio playing through the following keys:
 + Key ‘r’ or R’: rewind to the beginning of the audio and play
