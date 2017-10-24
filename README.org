@@ -7,11 +7,9 @@ y(i) = b_{0} x(i) + b_{1} x(i -1) + ... + b_{5} x(i - 5) - a{1} y(i - 1) - a_{2}
 
 where the filter coefficients ܾ b_{0}, b_{1}, ... , b_{5} and a_{1}, a_{2}, ... , a_{5} can be found in the Appendix according to the required cut-off frequency f_{c} and the sampling frequency f_{s} of the speech signal.
 * Feature
-1. The program be named as “lpplay” and read the cut-off frequency f_{c} value, either 200 Hz or 500 Hz, from the command lines and take one WAV audio file as the input audio x(i). For instance, the command line may look like this
-$lpplay f_{c} file.wav --- where f_{c} is either 200 or 500 and other values are invalid.
+1. The program be named as “lpplay” and read the cut-off frequency f_{c} value, either 200 Hz or 500 Hz, from the command lines and take one WAV audio file as the input audio x(i). For instance, the command line may look like this. $lpplay f_{c} file.wav --- where f_{c} is either 200 or 500 and other values are invalid.
 
-2. The program can display the usage of the program and exists when it is invoked as follows
-$ lpplay –help
+2. The program can display the usage of the program and exists when it is invoked as follows $ lpplay –help
 
 3. The program can support 16 bit mono WAV files whose sampling frequencies are either 22050Hz or 44100Hz. For unsupported WAV files, the program will display a message saying that the WAV format is not supported and display the following information on the file.wav and then exist.
 + Number of channels
