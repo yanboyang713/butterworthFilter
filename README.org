@@ -9,7 +9,8 @@ where the filter coefficients ܾ b_{0}, b_{1}, ... , b_{5} and a_{1}, a_{2}, ...
 * Feature
 1. The program be named as “lpplay” and read the cut-off frequency f_{c} value, either 200 Hz or 500 Hz, from the command lines and take one WAV audio file as the input audio x(i). For instance, the command line may look like this. $lpplay f_{c} file.wav --- where f_{c} is either 200 or 500 and other values are invalid.
 
-2. The program can display the usage of the program and exists when it is invoked as follows $ lpplay –help
+2. The program can display the usage of the program and exists when it is invoked as follows
+$ lpplay –help
 
 3. The program can support 16 bit mono WAV files whose sampling frequencies are either 22050Hz or 44100Hz. For unsupported WAV files, the program will display a message saying that the WAV format is not supported and display the following information on the file.wav and then exist.
    + Number of channels
@@ -22,7 +23,8 @@ where the filter coefficients ܾ b_{0}, b_{1}, ... , b_{5} and a_{1}, a_{2}, ...
    + Key ‘q’ or ‘Q’: exit the program
 5. When key ‘t’ is pressed by the user at any time, the program should CONTINUE playing the audio from the current position. In other words, the program MUST NOT rewind to the beginning of the audio when the key is pressed.
 6. There are Makefile in the folder when you want to compile and link your program.
- $ make
+
+$ make
 
 * Useful References
 SDL Reference manual.
