@@ -3,7 +3,7 @@ The perception of intonation can be simulated by low-pass filtering a speech sig
 This program to process a speech signal x(i) using the 5th order low-pass Butterworth filter and to play the processed signal y(i).
 The 5th order Butterworth filter can be expressed as
 y(i) = b_0 x(i) + b_1 x(i -1)
-
+y^6
 ݕሺ݅ሻ ൌ ܾ଴ݔሺ݅ሻ ൅ ܾଵݔሺ݅ െ 1ሻ ൅ ⋯ ൅ ܾହݔሺ݅ െ 5ሻ െ ܽଵݕሺ݅ െ 1ሻ െ ܽଶݕሺ݅ െ 2ሻ െ ⋯ െ ܽହݕሺ݅ െ 5ሻ
 where the filter coefficients ܾ଴, ܾଵ, ⋯ , ܾହ and ܽଵ, ܽଶ, ⋯ , ܽହ can be found in the Appendix according to
 the required cut-off frequency ݂ ௖ and the sampling frequency ݂ ௦ of the speech signal.
