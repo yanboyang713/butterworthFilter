@@ -1,0 +1,76 @@
+* Overview
+The perception of intonation can be simulated by low-pass filtering a speech signal at, say 200Hz or
+500Hz, in order to create a somewhat muffled version of a recoding, which preserves the pitch of the
+original signal.
+In this assignment, you are required to develop a program to process a speech signal ݔሺ݅ሻ using the 5th
+order low-pass Butterworth filter and to play the processed signal ݕሺ݅ሻ. The 5th order Butterworth filter
+can be expressed as
+ݕሺ݅ሻ ൌ ܾ଴ݔሺ݅ሻ ൅ ܾଵݔሺ݅ െ 1ሻ ൅ ⋯ ൅ ܾହݔሺ݅ െ 5ሻ െ ܽଵݕሺ݅ െ 1ሻ െ ܽଶݕሺ݅ െ 2ሻ െ ⋯ െ ܽହݕሺ݅ െ 5ሻ
+where the filter coefficients ܾ଴, ܾଵ, ⋯ , ܾହ and ܽଵ, ܽଶ, ⋯ , ܽହ can be found in the Appendix according to
+the required cut-off frequency ݂ ௖ and the sampling frequency ݂ ௦ of the speech signal.
+Requirements
+1. The program should be named as “lpplay” and shall read the cut-off frequency ݂ ௖ value, either
+200 ݖܪor 500 ,ݖܪfrom the command lines and take one WAV audio file as the input audio
+ݔሺ݅ሻ. For instance, the command line may look like this
+$lpplay ݂ ௖ file.wav
+where f
+ୡ is either 200 or 500 and other values are invalid.
+2. The program should just display the usage of the program and exists when it is invoked as
+follows
+$ lpplay –help
+3. The program should support 16 bit mono WAV files whose sampling frequencies are either
+22050Hz or 44100Hz. For unsupported WAV files, the program should display a message saying
+that the WAV format is not supported and display the following information on the file.wav and
+then exist.
+a. Number of channels
+b. Number of bits per sample
+c. Sampling frequency
+d. Duration in seconds
+4. Users should be able to switch the audio playing through the following keys:
+a. Key ‘r’ or R’: rewind to the beginning of the audio and play
+b. Key ‘t’: tog the looping and non-looping playing mode (default looping).
+c. Key ‘q’ or ‘Q’: exit the program
+5. When key ‘t’ is pressed by the user at any time, the program should CONTINUE playing the
+audio from the current position. In other words, the program MUST NOT rewind to the
+SCIT, University of Wollongong
+2 of 2
+beginning of the audio when the key is pressed.
+6. You MUST supply a Makefile together with your source code to compile and link your program.
+7. No third-party libraries should be used in the program except SDL. The code has to be in C/C++.
+Marking Scheme
+1. Zero marks may be graded if your code cannot be compiled using the supplied Makefile.
+2. Program structure, comments and usability (2%)
+3. Rewinding, looping and non-looping playing (2%)
+4. Generation and playing of the processed audio signal with cut-off frequency ݂ ௖ ൌ 200ݖܪ
+(3%)
+5. Generation and playing of the processed audio signal with cut-off frequency ݂ ௖ ൌ 500ݖܪ
+(3%)
+6. Display of information on unsupported audio files (2%)
+7. Support of 16 bit mono WAV files with sampling rate of 22050Hz and 44100Hz (3%)
+Useful References
+ SDL Reference manual.
+ Example code (sample4a1.c) that raises or lowers the volume respectively by factor of 2
+when the key ‘=’ or ‘-` is pressed.
+Submission
+a) Zip all source files (header and C/C++) into a single zip file: your_login_name.zip
+b) Submit the zip file via Moodle.
+c) Submission through email WILL NOT be accepted.
+IMPORTANT:
+a) DO NOT include and submit any object and media files in the zip file. Your submission may not
+be accepted if you do so.
+b) Submission through email WILL NOT be accepted
+Appendix: Filter Coefficients for a 5th Order Low-pass Butterworth Filter
+fc fs fc/fs closest (fc/fs) in the table
+500 22050 0.0226757 0.0225
+b= 4.92870054213945e-08 2.46435027106973e-07 4.92870054213945e-07
+4.92870054213945e-07 2.46435027106973e-07 4.92870054213945e-08
+a= -4.77126970811754 9.11101949606003 -8.70364051282520
+4.15937748789777 -0.795485185830889
+fc fs fc/fs closest (fc/fs) in the table
+200 22050 0.0090702 0.0125
+500 44100 0.0113378 0.0125
+200 44100 0.004535 0.0125
+b= 2.74050909743195e-09 1.37025454871598e-08 2.74050909743195e-08
+2.74050909743195e-08 1.37025454871598e-08 2.74050909743195e-09
+a= -4.87292228923095 9.49972611051988 -9.26133224169541
+4.51518275374949 -0.880654245646732
